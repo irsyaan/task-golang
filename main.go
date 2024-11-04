@@ -1,6 +1,7 @@
 package main
 
 import (
+	"GoLang/utils"
 	"flag"
 	"fmt"
 	"strconv"
@@ -24,24 +25,13 @@ func main() {
 		}
 	}
 
-	sum := 0
+	fmt.Println("Number Before Magic Change", n)
+	utils.MagicChange(&n)
+	fmt.Println("Number After Magic Change", n)
 
-	for i := 0; i <= n; i++ {
-		sum += i
-
-	}
-
-	println(sum)
-
-	// fmt.Println(n)
-	// utils.MagicChange(&n)
-	// fmt.Println(n)
-
-	// magicNumber := utils.MagicNumber{Number: n}
-	// fmt.Println("Number Before Multiply: ", magicNumber.Number)
-	// magicNumber.Multiply(n)
-	// fmt.Println("Number After Multiply: ", magicNumber.Number)
-
-	// fmt.Println(utils.MagicTria(n))
+	magicNumber := utils.MagicNumber{Number: n}
+	fmt.Println("Number Before Multiply: ", magicNumber.Number)
+	magicNumber.Multiply(n)
+	fmt.Println("Number After Multiply: ", magicNumber.Number)
 
 }
