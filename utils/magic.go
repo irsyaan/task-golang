@@ -5,7 +5,11 @@ func MagicSum(n int) int {
 }
 
 func MagicPow(n int) int {
-	return n * n
+	result := 1
+	for i := 0; i < n; i++ {
+		result *= n
+	}
+	return result
 }
 
 func MagicOdd(n int) bool {
